@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Stefan Dili</title>
+  </head>
+  <body>
+    <nav
+      class="px-32 items-center bg-gray-800 hover:bg-opacity-100 justify-between flex h-12 text-lg bg-opacity-0 text-gray-600 hover:text-white z-50 w-screen fixed shadow-2xl text-white transition ease-in-out duration-200"
+    >
+      <button>Home</button>
+      <button>Work</button>
+      <button>Writing</button>
+      <button>Contact</button>
+      <a
+        href="https://docs.google.com/document/d/14THVufu_nc1EfBgCkGXKpnd1sd2GJh3EQYTZZ4-2SDE/edit?usp=sharing"
+        >Resume</a
+      >
+    </nav>
+    <div class="outer-wrapper">
+      <div class="inner-wrapper flex">
+        <div class="home-wrapper flex pt-12 pl-8 h-screen">
+          <div
+            class="bio rounded-lg p-4 text-xl bg-transparent duration-300 hover:bg-gray-800 w-full flex m-10 shadow-lg flex-0 text-gray-600 hover:text-gray-400 hover:shadow-2xl"
+          >
+            <div class="img-block flex justify-center w-3/4">
+              <img
+                src="profilna.jpg"
+                class="rounded-full h-48 float-left"
+                alt="Profile Image"
+              />
+            </div>
+            <div class="text mx-auto w-auto leading-tight p-2">
+              <p>
+                Hello, I'm Stefan Dili. I am a full-stack
+                <span
+                  data-tooltip='develop /dɪˈvɛləp/ verb grow or cause
+                                    to grow and become more mature, advanced, or elaborate"'
+                  class="dev-tooltip"
+                  >developer</span
+                >, currently working as a technical writer at
+                <a
+                  href="https://careerkarma.com/"
+                  style="color: rgba(194, 232, 18, 1);"
+                  >Career Karma</a
+                >, and volunteering as a student mentor at
+                <a
+                  href="https://www.microverse.org/"
+                  style="color: rgba(194, 232, 18, 1);"
+                  >Microverse</a
+                >. <br />
+                <br />
+                I make websites/web apps that give results, with landing pages
+                and CTAs that convert. <br />
+
+                I deliver design that's pleasant and easy on the eyes, <br />
+                leaving complexity to people who don't care about website
+                loading time, conversions, and customer retention. <br />
+
+                I love to work with passionate small brands/businesses. <br />
+                There is a certain sense of family in them.
+              </p>
+              <br />
+              <p>
+                With the expansion of mobile web surfing, mobile first websites
+                have become a must. For this reason everything I build is fully
+                responsive.
+              </p>
+              <br />
+              <p>
+                If you need someone to increase your
+                sales/subscriptions/conversions by means of an effective
+                website, I'm your man. <br />
+                <br />
+                If you need someone to design your idea, and/or give you
+                conversion-centered feedback on it, I'm your man. <br />
+                <br />
+                If you want someone to just make you a website and disregard
+                SEO, and marketing best practices, please find someone else.
+              </p>
+            </div>
+          </div>
+
+          <div class="work w-auto pl-32">
+            <h2 class="text-gray-500 whitespace-no-wrap block mb-12 text-5xl">
+              Here's some of my recent work
+            </h2>
+
+            <div class="projects-box flex w-screen">
+              <a href="https://studio-dili.com" target="blank" class="mr-12">
+                <div
+                  class="project-card hover:shadow-2xl w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+                >
+                  <h3 class="text-2xl pb-4">Studio-Dili</h3>
+                  <div class="img-and-text">
+                    <img
+                      src="studio-dili-mockup.jpg"
+                      class="rounded w-full"
+                      alt="Studi Dili"
+                    />
+                    <div class="project-description mx-auto">
+                      <p class="text-xl p-4">
+                        Website for a massage salon on <br />
+                        Gran Canaria made with HTML5, CSS3, and SASS.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://ezrecipeasy.herokuapp.com"
+                target="blank"
+                class="mr-12"
+              >
+                <div
+                  class="project-card hover:shadow-2xl w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+                >
+                  <h3 class="text-2xl pb-4">EZ-Recipeasy</h3>
+                  <div class="img-and-text">
+                    <img
+                      src="ezrecipeasy-mockup.jpg"
+                      class="rounded w-full"
+                      alt="Easy Recipeasy"
+                    />
+                    <div class="project-description mx-auto">
+                      <p class="text-xl p-4">
+                        A social network for sharing and voting delicious
+                        recipes made with Ruby on Rails, TailwindCSS, AWS S3,
+                        and PostgreSQL.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://gifted-morse-5d1101.netlify.app/index.html"
+                target="blank"
+                class="mr-12"
+              >
+                <div
+                  class="project-card hover:shadow-2xl w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+                >
+                  <h3 class="text-2xl pb-4">Learn-to.code</h3>
+                  <div class="img-and-text">
+                    <img
+                      src="learn-to-code-mockup.jpg"
+                      class="rounded w-full"
+                      alt="Learn to code bootcamp"
+                    />
+                    <div class="project-description mx-auto">
+                      <p class="text-xl p-4">
+                        A website for an online coding bootcamp built with HTML5
+                        and CSS3.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mx-64 bg-red-400">
+            <h3 class="whitespace-no-wrap">Here goes my writing</h3>
+          </div>
+
+          <div id="contact-me" class="ml-64 my-auto">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              consectetur sunt dolor amet cumque ipsam neque alias voluptas,
+              voluptatum dolore veritatis accusamus dolorum natus dignissimos,
+              possimus, molestiae illo delectus. Reprehenderit?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
