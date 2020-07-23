@@ -42,7 +42,8 @@
   font-size: 0.8em;
   background: rgba(99, 102, 141, 0.863);
   color: rgba(194, 232, 18, 1);
-  border-image: linear-gradient(
+  border-image:
+    linear-gradient(
       to bottom left,
       rgba(48, 47, 57, 1),
       5%,
