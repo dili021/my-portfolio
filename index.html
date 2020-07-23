@@ -8,6 +8,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>Stefan Dili</title>
   </head>
   <body>
@@ -26,9 +30,9 @@
     </nav>
     <div class="outer-wrapper">
       <div class="inner-wrapper flex">
-        <div class="home-wrapper flex pt-12 pl-8 h-screen">
+        <div class="home-wrapper flex pt-12 pl-8 w-full h-screen">
           <div
-            class="bio rounded-lg p-4 text-xl bg-transparent duration-300 hover:bg-gray-800 w-full flex m-10 shadow-lg flex-0 text-gray-600 hover:text-gray-400 hover:shadow-2xl"
+            class="bio rounded-lg p-4 text-xl bg-transparent duration-300 hover:bg-gray-800 w-1/4 flex m-10 shadow-lg text-gray-600 hover:text-gray-400 hover:shadow-2xl"
           >
             <div class="img-block relative items-center w-3/4">
               <div class="flex justify-center">
@@ -139,7 +143,7 @@
             <div class="projects-box flex w-screen">
               <a href="https://studio-dili.com" target="blank" class="mr-12">
                 <div
-                  class="project-card hover:shadow-2xl w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+                  class="project-card hover:shadow-2xl duration-300 hover:bg-gray-800 w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
                 >
                   <h3 class="text-2xl pb-4">Studio-Dili</h3>
                   <div class="img-and-text">
@@ -163,7 +167,7 @@
                 class="mr-12"
               >
                 <div
-                  class="project-card hover:shadow-2xl w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+                  class="project-card hover:shadow-2xl duration-300 hover:bg-gray-800 w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
                 >
                   <h3 class="text-2xl pb-4">EZ-Recipeasy</h3>
                   <div class="img-and-text">
@@ -188,7 +192,7 @@
                 class="mr-12"
               >
                 <div
-                  class="project-card hover:shadow-2xl w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+                  class="project-card hover:shadow-2xl duration-300 hover:bg-gray-800 w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
                 >
                   <h3 class="text-2xl pb-4">Learn-to.code</h3>
                   <div class="img-and-text">
@@ -208,14 +212,52 @@
               </a>
             </div>
           </div>
-
-          <div id="contact-me" class="ml-64 my-auto">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-              consectetur sunt dolor amet cumque ipsam neque alias voluptas,
-              voluptatum dolore veritatis accusamus dolorum natus dignissimos,
-              possimus, molestiae illo delectus. Reprehenderit?
-            </p>
+          <div class="writing text-center w-1/6">
+            <p class="text-2xl p-12">My writing will go here...</p>
+          </div>
+          <div
+            class="ml-64 bg-gray-500 shadow-xl hover:shadow-2xl rounded-lg p-24 pt-0 my-auto"
+          >
+            <form
+              id="contact-me"
+              method="POST"
+              data-netlify="true"
+              name="contact"
+              class="flex flex-col"
+            >
+              <span class="text-xl text-bold text-center p-6">Contact me</span>
+              <label hidden for="name">Your name</label>
+              <input
+                type="text"
+                placeholder="Your name"
+                name="name"
+                id="name"
+                class="p-2 mb-2 bg-gray-800 text-gray-100 rounded"
+              />
+              <label hidden for="email">email</label>
+              <input
+                type="email"
+                placeholder="Your email"
+                name="email"
+                id="email"
+                class="p-2 mb-2 bg-gray-800 text-gray-100 rounded"
+              />
+              <label hidden for="text">What do you have in mind?</label>
+              <textarea
+                name="text"
+                id="text"
+                cols="30"
+                rows="10"
+                class="p-2 mb-2 bg-gray-800 text-gray-100 rounded shadow-lg"
+                placeholder="What do you have in mind?"
+              ></textarea>
+              <button
+                type="submit"
+                class="my-3 p-2 bg-gray-300 rounded-lg w-full hover:bg-gray-200"
+              >
+                Send
+              </button>
+            </form>
           </div>
         </div>
       </div>
