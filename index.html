@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
       rel="stylesheet"
     />
+    <script>
+      if (screen.width <= 768) {
+        document.location = "mobile.html";
+      }
+    </script>
     <title>Stefan Dili</title>
   </head>
   <body>
@@ -33,13 +38,13 @@
         <div class="home-wrapper flex pt-12 pl-8 w-full h-screen">
           <div
             id="bio"
-            class="bio rounded-lg p-4 text-xl bg-transparent duration-300 hover:bg-gray-800 w-1/4 flex m-10 shadow-lg text-gray-600 hover:text-gray-400 hover:shadow-2xl"
+            class="bio rounded-lg p-4 ml-0 text-xl bg-transparent duration-300 hover:bg-gray-800 flex lg:flex-row flex-col m-6 shadow-lg text-gray-600 hover:text-gray-400 hover:shadow-2xl"
           >
-            <div class="img-block relative items-center w-3/4">
+            <div class="img-block pb-12 md:pb-0 relative items-center w-3/4">
               <div class="flex justify-center">
                 <img
                   src="assets/profilna.jpg"
-                  class="rounded-full mx- h-48 float-left"
+                  class="rounded-full h-48 w-48 float-left"
                   alt="Profile Image"
                 />
               </div>
@@ -85,7 +90,7 @@
                 ></a>
               </div>
             </div>
-            <div class="text mx-auto w-auto leading-tight p-2">
+            <div class="text mx-auto w-auto leading-tight">
               <p>
                 Hello, I'm Stefan Dili. I am a full-stack
                 <span
@@ -104,7 +109,6 @@
                   style="color: rgba(194, 232, 18, 1);"
                   >Microverse</a
                 >. <br />
-                <br />
                 I make websites/web apps that give results, with landing pages
                 and CTAs that convert. <br />
 
@@ -228,31 +232,37 @@
               class="flex flex-col"
             >
               <span class="text-xl text-bold text-center p-6">Contact me</span>
-              <label hidden for="name">Your name</label>
-              <input
-                type="text"
-                placeholder="Your name"
-                name="name"
-                id="name"
-                class="p-2 mb-2 bg-gray-800 text-gray-100 rounded"
-              />
-              <label hidden for="email">email</label>
-              <input
-                type="email"
-                placeholder="Your email"
-                name="email"
-                id="email"
-                class="p-2 mb-2 bg-gray-800 text-gray-100 rounded"
-              />
-              <label hidden for="text">What do you have in mind?</label>
-              <textarea
-                name="text"
-                id="text"
-                cols="30"
-                rows="10"
-                class="p-2 mb-2 bg-gray-800 text-gray-100 rounded shadow-lg"
-                placeholder="What do you have in mind?"
-              ></textarea>
+              <div class="form-control">
+                <label hidden for="name">Your name</label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  name="name"
+                  id="name"
+                  class="p-2 mb-2 w-full bg-gray-800 text-gray-100 rounded"
+                />
+              </div>
+              <div class="form-control">
+                <label hidden for="email">email</label>
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  name="email"
+                  id="email"
+                  class="p-2 mb-2 w-full bg-gray-800 text-gray-100 rounded"
+                />
+              </div>
+              <div class="form-control">
+                <label hidden for="text">What do you have in mind?</label>
+                <textarea
+                  name="text"
+                  id="text"
+                  cols="30"
+                  rows="10"
+                  class="p-2 mb-2 w-full bg-gray-800 text-gray-100 rounded shadow-lg"
+                  placeholder="What do you have in mind?"
+                ></textarea>
+              </div>
               <button
                 type="submit"
                 class="my-3 p-2 bg-gray-300 rounded-lg w-full hover:bg-gray-200"
@@ -264,5 +274,7 @@
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

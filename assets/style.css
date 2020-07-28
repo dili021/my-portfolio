@@ -1,4 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
+  font-family: "Fira Mono", monospace;
+}
+
+a {
   font-family: "Fira Mono", monospace;
 }
 
@@ -27,6 +35,10 @@ nav {
   background: linear-gradient(to right, rgb(26, 26, 26), rgb(231, 231, 231));
 }
 
+.m-wrap {
+  background: linear-gradient(rgb(26, 26, 26), rgb(231, 231, 231));
+}
+
 /* pop-up */
 .dev-tooltip {
   position: relative;
@@ -44,7 +56,7 @@ nav {
   width: 16em;
   font-weight: bold;
   font-size: 0.8em;
-  background: rgba(99, 102, 141, 0.863);
+  background: rgba(99, 102, 141, 0.973);
   color: rgba(194, 232, 18, 1);
   border-image: linear-gradient(
       to bottom left,
@@ -61,8 +73,32 @@ nav {
 
 .dev-tooltip:hover::after {
   scale: 1;
-  top: -5em;
+  top: 0em;
   left: 3em;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: opacity 1s ease, top 0.2s ease, scale 0.2s ease, left 0.2s ease;
+}
+
+.m-nav {
+  transform: translateX(-100vw);
+  opacity: 0;
+
+  /* display: none; */
+}
+
+.m-nav.open {
+  transition: all 0.7s;
+  display: block;
+  transform: translateX(0);
+  opacity: 0.8;
+}
+
+@media (min-width: 769px) {
+  .bio {
+    width: 70rem;
+  }
+  .dev-tooltip:hover::after {
+    top: -5em;
+    left: 3em;
+  }
 }
