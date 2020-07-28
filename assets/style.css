@@ -1,15 +1,10 @@
 html {
   scroll-behavior: smooth;
+  font-family: "Fira Mono", monospace;
 }
-
 nav {
-  font-family: "Fira Mono", monospace;
+  z-index: 5;
 }
-
-a {
-  font-family: "Fira Mono", monospace;
-}
-
 .inner-wrapper {
   width: 300vw;
   transform: rotate(90deg) translateY(-100vh);
@@ -36,6 +31,8 @@ a {
 }
 
 .m-wrap {
+  transition: 0.35s ease-in-out;
+  overflow-x: hidden;
   background: linear-gradient(rgb(26, 26, 26), rgb(231, 231, 231));
 }
 
@@ -73,24 +70,31 @@ a {
 
 .dev-tooltip:hover::after {
   scale: 1;
-  top: 0em;
+  top: -8em;
   left: 3em;
-  opacity: 0.9;
+  opacity: 1;
   transition: opacity 1s ease, top 0.2s ease, scale 0.2s ease, left 0.2s ease;
 }
-
-.m-nav {
-  transform: translateX(-100vw);
-  opacity: 0;
-
-  /* display: none; */
+button:focus {
+  outline: none;
 }
 
-.m-nav.open {
-  transition: all 0.7s;
-  display: block;
-  transform: translateX(0);
-  opacity: 0.8;
+.btn-close {
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+}
+.sidebar {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.35s ease-in-out;
 }
 
 @media (min-width: 769px) {
