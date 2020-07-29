@@ -75,7 +75,7 @@ form.addEventListener("submit", (e) => {
 });
 
 function suggestRefresh() {
-  if (window.innerWidth <= 768 && document.location === "index.html") {
+  if (innerWidth <= 768 && document.location == "index.html") {
     alert("refresh your browser to load the mobile version");
   }
 }

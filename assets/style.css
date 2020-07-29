@@ -1,7 +1,14 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
 html {
   scroll-behavior: smooth;
   font-family: "Fira Mono", monospace;
 }
+
 nav {
   z-index: 5;
 }
@@ -42,7 +49,9 @@ nav {
   color: rgba(194, 232, 18, 1);
   cursor: pointer;
 }
-
+span {
+  color: rgba(194, 232, 18, 1);
+}
 .dev-tooltip::after {
   content: attr(data-tooltip);
   position: absolute;
