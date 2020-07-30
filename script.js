@@ -74,10 +74,10 @@ form.addEventListener("submit", (e) => {
   validateEmail(email);
 });
 
-function suggestRefresh() {
-  if (innerWidth <= 768) {
-    alert("refresh your browser to load the mobile version");
-  }
-}
-
-onresize = suggestRefresh;
+// function suggestRefresh() {
+// if (innerWidth <= 768) {
+// alert("refresh your browser to load the mobile version");
+// }
+// }
+//
+// onresize = suggestRefresh;
