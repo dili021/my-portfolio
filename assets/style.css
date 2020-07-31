@@ -12,33 +12,15 @@ html {
 nav {
   z-index: 5;
 }
-.inner-wrapper {
-  width: 300vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-}
-
-.outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: absolute;
-  scrollbar-width: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
 
 .home-wrapper {
-  background: linear-gradient(to right, rgb(26, 26, 26), rgb(231, 231, 231));
+  transition: 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  overflow-x: hidden;
+  background: linear-gradient(rgb(26, 26, 26), rgb(231, 231, 231));
 }
 
 .m-wrap {
-  transition: 0.35s ease-in-out;
+  transition: 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   overflow-x: hidden;
   background: linear-gradient(rgb(26, 26, 26), rgb(231, 231, 231));
 }
@@ -103,15 +85,38 @@ button:focus {
   opacity: 0.9;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.35s ease-in-out;
+  transition: 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 @media (min-width: 769px) {
-  .bio {
+  /* .bio {
     width: 70rem;
-  }
+  } */
   .dev-tooltip:hover::after {
     top: -5em;
     left: 3em;
+  }
+}
+@media (min-width: 1024px) {
+  .home-wrapper {
+    background: linear-gradient(to right, rgb(26, 26, 26), rgb(231, 231, 231));
+  }
+  .inner-wrapper {
+    width: 300vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+  }
+  .outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 }

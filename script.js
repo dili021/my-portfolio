@@ -8,12 +8,12 @@ const nav = document.querySelector("nav");
 
 function openMenu() {
   mobMenu.style.width = "250px";
-  document.querySelector(".m-wrap").style.marginLeft = "250px";
+  document.querySelector(".home-wrapper").style.marginLeft = "250px";
 }
 
 function closeMenu() {
   mobMenu.style.width = "0";
-  document.querySelector(".m-wrap").style.marginLeft = "0";
+  document.querySelector(".home-wrapper").style.marginLeft = "0";
 }
 
 function showError(input, msg) {

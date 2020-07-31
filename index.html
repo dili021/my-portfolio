@@ -18,45 +18,123 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
       rel="stylesheet"
     />
-    <script>
-      if (screen.width <= 768) {
-        document.location = "mobile.html";
-      }
-    </script>
     <title>Stefan Dili</title>
   </head>
   <body>
     <nav
-      class="px-32 items-center bg-gray-800 hover:bg-opacity-100 justify-between flex h-12 text-lg bg-opacity-0 text-gray-600 hover:text-white z-50 w-screen fixed shadow-2xl transition ease-in-out duration-200"
+      class="lg:px-32 items-center lg:bg-gray-800 hover:bg-opacity-100 justify-between flex h-12 text-lg lg:bg-opacity-0 text-gray-600 lg:hover:text-white z-50 lg:py-0 w-screen fixed shadow-2xl transition ease-in-out duration-200 bottom-0 lg:top-0 bg-gray-200 py-8 px-6"
     >
-      <a href="#bio">Home</a>
-      <a href="#work">Work</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
+      <button
+        id="menu-btn"
+        class="fill-current lg:hidden color-gray-700"
+        onclick="openMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+        >
+          <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+        </svg>
+      </button>
+      <a class="hidden lg:block" href="#bio">Home</a>
+      <a class="hidden lg:block" href="#work">Work</a>
+      <a class="hidden lg:block" href="#writing">Writing</a>
+      <a class="hidden lg:block" href="#contact">Contact</a>
       <a
+        class="hidden lg:block"
         href="https://docs.google.com/document/d/14THVufu_nc1EfBgCkGXKpnd1sd2GJh3EQYTZZ4-2SDE/edit?usp=sharing"
         target="blank"
         >Resume</a
       >
+      <div class="m-social w-3/4 lg:hidden justify-between flex">
+        <a
+          href="https://twitter.com/DiliStefan"
+          target="blank"
+          class="fill-current m-2 text-grey-300 hover:text-gray-100"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+            /></svg
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/stefan-dili/"
+          target="blank"
+          class="fill-current m-2 text-grey-300 hover:text-gray-100"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            /></svg
+        ></a>
+        <a
+          href="https://github.com/dili021"
+          target="blank"
+          class="fill-current m-2 text-grey-300 hover:text-gray-100"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            /></svg
+        ></a>
+      </div>
     </nav>
+    <div
+      class="sidebar z-10 bg-gray-800 py-32 text-2xl justify-center text-gray-200 flex flex-col"
+    >
+      <button
+        href="#"
+        class="btn-close text-white mb-6 p-1 text-5xl"
+        onclick="closeMenu()"
+      >
+        &times;
+      </button>
+      <a class="mx-auto my-2 block p-2" href="#bio">Home</a>
+      <a class="mx-auto my-2 block p-2" href="#work">Work</a>
+      <a class="mx-auto my-2 block p-2" href="#writing">Writing</a>
+      <a class="mx-auto my-2 block p-2" href="#contact">Contact</a>
+      <a
+        class="mx-auto block p-1"
+        href="https://docs.google.com/document/d/14THVufu_nc1EfBgCkGXKpnd1sd2GJh3EQYTZZ4-2SDE/edit?usp=sharing"
+        target="blank"
+        >Resume</a
+      >
+    </div>
     <div class="outer-wrapper">
       <div class="inner-wrapper flex">
-        <div class="home-wrapper flex pt-12 pl-8 w-full h-screen">
+        <div
+          class="home-wrapper flex-col lg:flex-row flex lg:pt-12 lg:pl-8 w-full lg:h-screen"
+        >
           <div
             id="bio"
-            class="bio rounded-lg p-4 ml-0 text-xs lg:text-sm xl:text-lg bg-transparent duration-300 hover:bg-gray-800 flex lg:flex-row flex-col m-6 shadow-lg text-gray-600 hover:text-gray-400 hover:shadow-2xl"
+            class="bio lg:m-8 lg:flex bg-gray-800 lg:flex-row w-screen rounded-lg p-6 lg:p-4 text-2xl lg:text-sm xl:text-lg lg:bg-transparent duration-300 lg:hover:bg-gray-800 shadow-lg text-gray-600 lg:hover:text-gray-400 hover:shadow-2xl"
           >
-            <div class="img-block pb-12 lg:pb-0 relative items-center w-3/4">
-              <div class="flex justify-end lg:justify-center">
+            <div class="img-block pb-12 lg:pb-0 relative items-center">
+              <div class="flex justify-center sm:justify-start">
                 <img
                   src="assets/profilna.jpg"
-                  class="rounded-full h-24 w-24 lg:h-48 lg:w-48 float-left"
+                  class="rounded-full h-32 w-32 float-left"
                   alt="Profile Image"
                 />
               </div>
-              <div class="links p-2 flex absolute bottom-0">
+              <div class="links hidden lg:flex p-2 absolute bottom-0">
                 <a
                   href="https://twitter.com/DiliStefan"
+                  target="blank"
                   class="fill-current m-2 text-grey-300 hover:text-gray-100"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -70,6 +148,7 @@
                 ></a>
                 <a
                   href="https://www.linkedin.com/in/stefan-dili/"
+                  target="blank"
                   class="fill-current m-2 text-grey-300 hover:text-gray-100"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,6 +162,7 @@
                 ></a>
                 <a
                   href="https://github.com/dili021"
+                  target="blank"
                   class="fill-current m-2 text-grey-300 hover:text-gray-100"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +176,7 @@
                 ></a>
               </div>
             </div>
-            <div class="text mx-auto xl:pt-6 w-auto leading-tight">
+            <div class="text m-0 xl:pt-6 lg:mx-auto lg:w-2/3 lg:leading-tight">
               <p>
                 Hello, I'm Stefan Dili. I am a full-stack
                 <span
@@ -146,90 +226,97 @@
             </div>
           </div>
 
-          <div id="work" class="work w-auto pt-8 pl-32">
-            <h2 class="text-gray-500 whitespace-no-wrap block mb-16 text-3xl">
+          <div id="work" class="work w-screen lg:w-auto pt-8 lg:pl-32">
+            <h2
+              class="text-gray-500 p-1 text-center lg:text-left mb-16 text-5xl lg:text-3xl"
+            >
               Here's some of my recent work
             </h2>
 
-            <div class="projects-box flex w-screen">
-              <a href="https://studio-dili.com" target="blank" class="mr-12">
-                <div
-                  class="project-card hover:shadow-2xl duration-300 hover:bg-gray-800 w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
-                >
-                  <h3 class="text-2xl pb-4">Studio-Dili</h3>
-                  <div class="img-and-text">
+            <div class="projects-box flex flex-col lg:flex-row w-screen">
+              <div
+                class="project-card mr-12 hover:shadow-2xl duration-300 hover:bg-gray-800 w-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
+              >
+                <h3 class="text-2xl pb-4">Studio-Dili</h3>
+                <div class="img-and-text">
+                  <a
+                    href="https://studio-dili.com"
+                    class="lg:mr-12"
+                    target="blank"
+                  >
                     <img
                       src="assets/studio-dili-mockup.jpg"
                       class="rounded w-full"
                       alt="Studi Dili"
                     />
-                    <div class="project-description mx-auto">
-                      <p class="text-xl p-4">
-                        Website for a massage salon on <br />
-                        Gran Canaria made with HTML5, CSS3, and SASS.
-                      </p>
-                    </div>
+                  </a>
+                  <div class="project-description mx-auto">
+                    <p class="text-sm p-4">
+                      Website for a massage salon on <br />
+                      Gran Canaria made with HTML5, CSS3, and SASS.
+                    </p>
                   </div>
                 </div>
-              </a>
-              <a
-                href="https://ezrecipeasy.herokuapp.com"
-                target="blank"
-                class="mr-12"
+              </div>
+
+              <div
+                class="project-card mr-12 hover:shadow-2xl duration-300 hover:bg-gray-800 w-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
               >
-                <div
-                  class="project-card hover:shadow-2xl duration-300 hover:bg-gray-800 w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
-                >
-                  <h3 class="text-2xl pb-4">EZ-Recipeasy</h3>
-                  <div class="img-and-text">
+                <h3 class="text-2xl pb-4">EZ-Recipeasy</h3>
+                <div class="img-and-text">
+                  <a
+                    href="https://ezrecipeasy.herokuapp.com"
+                    class="lg:mr-12"
+                    target="blank"
+                  >
                     <img
                       src="assets/ezrecipeasy-mockup.jpg"
                       class="rounded w-full"
                       alt="Easy Recipeasy"
                     />
-                    <div class="project-description mx-auto">
-                      <p class="text-xl p-4">
-                        A social network for sharing and voting delicious
-                        recipes made with Ruby on Rails, TailwindCSS, AWS S3,
-                        and PostgreSQL.
-                      </p>
-                    </div>
+                  </a>
+                  <div class="project-description mx-auto">
+                    <p class="text-sm p-4">
+                      A social network for sharing recipes made with Ruby on
+                      Rails, TailwindCSS, AWS S3, and PostgreSQL.
+                    </p>
                   </div>
                 </div>
-              </a>
-              <a
-                href="https://gifted-morse-5d1101.netlify.app/index.html"
-                target="blank"
-                class="mr-12"
+              </div>
+
+              <div
+                class="project-card mr-12 hover:shadow-2xl duration-300 hover:bg-gray-800 w-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
               >
-                <div
-                  class="project-card hover:shadow-2xl duration-300 hover:bg-gray-800 w-full h-full hover:text-gray-300 text-gray-400 p-4 shadow-lg rounded-lg"
-                >
-                  <h3 class="text-2xl pb-4">Learn-to.code</h3>
-                  <div class="img-and-text">
+                <h3 class="text-2xl pb-4">Learn-to.code</h3>
+                <div class="img-and-text">
+                  <a
+                    href="https://gifted-morse-5d1101.netlify.app/index.html"
+                    class="lg:mr-12"
+                    target="blank"
+                  >
                     <img
                       src="assets/learn-to-code-mockup.jpg"
                       class="rounded w-full"
                       alt="Learn to code bootcamp"
                     />
-                    <div class="project-description mx-auto">
-                      <p class="text-xl p-4">
-                        A website for an online coding bootcamp built with HTML5
-                        and CSS3.
-                      </p>
-                    </div>
+                  </a>
+                  <div class="project-description mx-auto">
+                    <p class="text-sm p-4">
+                      A website for an online coding bootcamp built with HTML5
+                      and CSS3.
+                    </p>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
-          <div id="writing" class="writing pt-8 mx-32 text-2xl w-1/6">
-            <h2 class="text-3xl text-gray-700 text-center">
+          <div id="writing" class="writing pt-8 lg:mx-32 text-xl lg:w-1/6">
+            <h2 class="text-3xl px-1 text-gray-700 text-center">
               Here's some of my writing from the internet:
             </h2>
             <br />
-            <ul class="link-box px-16 text-left">
-              <li class="my-12 mx-8 text-gray-400">
+            <ul class="link-box text-gray-600 lg:text-gray-400 text-left">
+              <li class="my-12 mx-8">
                 <a
                   href="https://careerkarma.com/blog/this-javascript/"
                   target="_blank"
@@ -239,7 +326,7 @@
                 >
               </li>
 
-              <li class="my-12 mx-8 text-gray-400">
+              <li class="my-12 mx-8">
                 <a
                   href="https://hackernoon.com/crud-and-the-7-restful-actions-uc4m3yoe"
                   target="_blank"
@@ -252,7 +339,7 @@
           </div>
           <div
             id="contact"
-            class="ml-64 mr-24 bg-gray-500 shadow-xl hover:shadow-2xl rounded-lg p-24 pt-0 my-auto"
+            class="lg:ml-64 lg:mr-24 bg-gray-500 shadow-xl hover:shadow-2xl lg:rounded-lg p-24 pt-0 my-4"
           >
             <form
               id="contact-me"
