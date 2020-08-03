@@ -17,6 +17,11 @@ nav {
   display: none;
 }
 
+::selection {
+  background: rgb(124, 120, 120);
+  color: rgba(194, 232, 18, 1);
+}
+
 .home-wrapper {
   transition: 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   overflow-x: hidden;
