@@ -5,6 +5,9 @@ const text = form.querySelector("#text");
 const menuBtn = document.querySelector("#menu-btn");
 const mobMenu = document.querySelector(".sidebar");
 const nav = document.querySelector("nav");
+const cursor = document.querySelector("#cursor");
+const contactForm = document.querySelector("#contact");
+const links = document.querySelectorAll("a");
 
 function openMenu() {
   mobMenu.style.width = "250px";
@@ -33,7 +36,7 @@ function getFieldName(input) {
 }
 
 function validateInput(inputArray) {
-  inputArray.forEach((input) => {
+  inputArray.forEach(input => {
     if (input.value.trim() === "") {
       showError(input, `${getFieldName(input)} is required`);
     } else {
@@ -66,7 +69,16 @@ function validateEmail(email) {
   }
 }
 
-form.addEventListener("submit", (e) => {
+[contactForm, ...links].forEach(link => {
+  link.addEventListener("mouseover", () => {
+    cursor.classList.add("link-mouseover");
+  });
+  link.addEventListener("mouseleave", () => {
+    cursor.classList.remove("link-mouseover");
+  });
+});
+
+form.addEventListener("submit", e => {
   e.preventDefault();
   validateInput([name, email, text]);
   validateLength(name, 3, 25);
@@ -74,10 +86,9 @@ form.addEventListener("submit", (e) => {
   validateEmail(email);
 });
 
-// function suggestRefresh() {
-// if (innerWidth <= 768) {
-// alert("refresh your browser to load the mobile version");
-// }
-// }
-//
-// onresize = suggestRefresh;
+addEventListener("mousemove", e => {
+  const x = e.pageX;
+  const y = e.pageY;
+  cursor.style.left = `${x}px`;
+  cursor.style.top = `${y}px`;
+});
