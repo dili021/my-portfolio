@@ -1,5 +1,12 @@
 > My portfolio website, featuring my bio, recent projects, writing, and contact.
 
+![image](https://user-images.githubusercontent.com/55356496/89411610-fe64c480-d725-11ea-9c1f-f76b97da1fe4.png)
+
+## Live link
+
+[visit](https://stefan-dili.tech)
+
+
 ## Built With
 - HTML
 - CSS (TailwindCSS)
@@ -15,9 +22,6 @@ and open with your editor of choice. <br>[TailwindCSS](https://tailwindcss.com/)
 
 No testing is implemented yet for this project.
 
-## Live link
-
-[visit](https://stefan-dili.tech)
 
 ## Author
 
@@ -35,4 +39,5 @@ in mind please visit the
 
 ## Future features
 
-- Rebuild the website into a rails app with a designated blog section
+- Rebuild the website into a Rails & React app with a designated blog section.
+- Email subscription to newsletter/blog.
