@@ -1,13 +1,14 @@
-const form = document.querySelector("#contact-me");
-const name = form.querySelector("#name");
-const email = form.querySelector("#email");
-const text = form.querySelector("#text");
-const menuBtn = document.querySelector("#menu-btn");
-const mobMenu = document.querySelector(".sidebar");
-const nav = document.querySelector("nav");
-const cursor = document.querySelector("#cursor");
-const contactForm = document.querySelector("#contact");
-const links = document.querySelectorAll("a");
+const form = document.querySelector("#contact-me"),
+  name = form.querySelector("#name"),
+  email = form.querySelector("#email"),
+  text = form.querySelector("#text"),
+  menuBtn = document.querySelector("#menu-btn"),
+  mobMenu = document.querySelector(".sidebar"),
+  nav = document.querySelector("nav"),
+  cursor = document.querySelector("#cursor"),
+  contactForm = document.querySelector("#contact"),
+  links = document.querySelectorAll("a"),
+  buttons = document.querySelectorAll("button");
 
 function openMenu() {
   mobMenu.style.width = "250px";
@@ -69,7 +70,7 @@ function validateEmail(email) {
   }
 }
 
-[contactForm, ...links].forEach(link => {
+[...buttons, ...links].forEach(link => {
   link.addEventListener("mouseover", () => {
     cursor.classList.add("link-mouseover");
   });
