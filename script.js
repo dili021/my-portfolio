@@ -11,12 +11,12 @@ const links = document.querySelectorAll("a");
 
 function openMenu() {
   mobMenu.style.width = "250px";
-  document.querySelector(".home-wrapper").style.marginLeft = "250px";
+  document.querySelector(".wrapper").style.marginLeft = "80px";
 }
 
 function closeMenu() {
   mobMenu.style.width = "0";
-  document.querySelector(".home-wrapper").style.marginLeft = "0";
+  document.querySelector(".wrapper").style.marginLeft = "0";
 }
 
 function showError(input, msg) {
