@@ -116,6 +116,11 @@ button:focus {
   text-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
+.contact {
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
 .link-box a:hover span.font-bold {
   display: inline-block;
   transform: translateX(20px);
