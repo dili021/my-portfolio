@@ -23,6 +23,10 @@ function closeMenu() {
   document.querySelector(".wrapper").style.marginLeft = "0";
 }
 
+function focusForm() {
+  form.name.focus();
+}
+
 function showError(input, msg) {
   const formControl = input.parentElement;
   input.classList.add("border-2", "border-red-700");

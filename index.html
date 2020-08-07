@@ -88,7 +88,9 @@
       <a class="pc-nav hidden lg:block" href="#top">Home</a>
       <a class="pc-nav hidden lg:block" href="#work">Work</a>
       <a class="pc-nav hidden lg:block" href="#writing">Writing</a>
-      <a class="pc-nav hidden lg:block" href="#contact">Contact</a>
+      <a class="pc-nav hidden lg:block" href="#name" onclick="focusForm()"
+        >Contact</a
+      >
       <a class="pc-nav hidden lg:block" href="assets\Resume.pdf" target="_blank"
         >Resume</a
       >
@@ -417,9 +419,10 @@
         </div>
       </div>
       <div
-        class="writing-and-contact flex flex-col lg:flex-row justify-between text-gray-400 pt-8 text-xl"
+        class="writing-and-contact flex flex-col lg:flex-row justify-between text-gray-400 pt-16 text-xl"
+        id="writing"
       >
-        <div id="writing" class="writing">
+        <div class="writing">
           <h2 class="text-2xl lg:text-3xl text-center">
             Here's some of my writing from the internet:
           </h2>
@@ -497,7 +500,7 @@
             </div>
             <button
               type="submit"
-              class="m-6 p-2 text-bold text-gray-800 bg-gray-300 rounded-lg mx-auto w-40 hover:bg-gray-200"
+              class="m-6 p-2 text-bold focus:bg-gray-400 text-gray-800 bg-gray-300 rounded-lg mx-auto w-40 hover:bg-gray-200"
             >
               send
             </button>
