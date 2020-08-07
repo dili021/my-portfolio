@@ -8,15 +8,18 @@ const form = document.querySelector("#contact-me"),
   cursor = document.querySelector("#cursor"),
   contactForm = document.querySelector("#contact"),
   links = document.querySelectorAll("a"),
-  buttons = document.querySelectorAll("button");
+  buttons = document.querySelectorAll("button"),
+  watcher = document.querySelector(".scroll-watcher");
 
 function openMenu() {
   mobMenu.style.width = "250px";
+  mobMenu.style.borderRight = "2px solid rgb(203,213,224)";
   document.querySelector(".wrapper").style.marginLeft = "80px";
 }
 
 function closeMenu() {
   mobMenu.style.width = "0";
+  mobMenu.style.borderRight = "";
   document.querySelector(".wrapper").style.marginLeft = "0";
 }
 
@@ -70,6 +73,17 @@ function validateEmail(email) {
   }
 }
 
+function showNav(payload) {
+  // console.log(payload);
+  console.log(!payload[0].isIntersecting);
+  if (!payload[0].isIntersecting) {
+    console.log(nav);
+    nav.classList.add("opaque");
+  } else {
+    nav.classList.remove("opaque");
+  }
+}
+
 [...buttons, ...links].forEach(link => {
   link.addEventListener("mouseover", () => {
     cursor.classList.add("link-mouseover");
@@ -93,3 +107,7 @@ addEventListener("mousemove", e => {
   cursor.style.left = `${x}px`;
   cursor.style.top = `${y}px`;
 });
+
+const observer = new IntersectionObserver(showNav);
+
+observer.observe(watcher);

@@ -65,10 +65,11 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Stefan Dili</title>
   </head>
-  <body class="w-screen">
+  <body class="">
+    <div id="top" class="scroll-watcher mx-auto w-20"></div>
     <div id="cursor"></div>
     <nav
-      class="lg:px-32 items-center lg:bg-gray-900 hover:bg-opacity-100 justify-between flex h-12 text-lg lg:bg-opacity-0 text-gray-400 lg:hover:text-white z-50 lg:py-0 w-screen fixed shadow-2xl transition ease-in-out duration-200 bottom-0 lg:top-0 bg-gray-200 py-8 px-6"
+      class="lg:px-32 items-center lg:bg-gray-900 justify-between flex h-12 text-lg lg:bg-opacity-0 text-gray-400 lg:hover:text-white z-50 lg:py-0 fixed shadow-2xl transition ease-in-out duration-200 bottom-0 left-0 right-0 lg:top-0 bg-gray-200 py-8 px-6"
     >
       <button
         id="menu-btn"
@@ -84,7 +85,7 @@
           <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
         </svg>
       </button>
-      <a class="pc-nav hidden lg:block" href="#bio">Home</a>
+      <a class="pc-nav hidden lg:block" href="#top">Home</a>
       <a class="pc-nav hidden lg:block" href="#work">Work</a>
       <a class="pc-nav hidden lg:block" href="#writing">Writing</a>
       <a class="pc-nav hidden lg:block" href="#contact">Contact</a>
@@ -137,7 +138,7 @@
       </div>
     </nav>
     <div
-      class="sidebar z-50 border-r-2 bg-gray-800 text-2xl justify-center text-gray-200 flex flex-col"
+      class="sidebar z-50 bg-gray-800 text-2xl justify-center text-gray-200 flex flex-col"
     >
       <button
         href="#"
@@ -157,7 +158,7 @@
     <div class="wrapper bg-gray-800 m-0 lg:p-12">
       <div
         id="bio"
-        class="bio flex flex-col lg:flex-row lg:mt-8 bg-gray-800 lg:rounded-lg p-2 lg:p-4 text-base lg:text-xl lg:bg-transparent duration-300 lg:hover:bg-gray-700 shadow-lg text-gray-400 lg:hover:text-gray-300 hover:shadow-2xl"
+        class="bio p-3 flex flex-col lg:flex-row lg:mt-8 mb-8 bg-gray-800 lg:rounded-lg lg:p-4 text-base lg:text-xl lg:bg-transparent duration-300 lg:hover:bg-gray-700 shadow-lg text-gray-400 lg:hover:text-gray-300 hover:shadow-2xl"
       >
         <div
           class="img-block flex-2 pb-12 flex flex-col justify-between items-center"
@@ -279,12 +280,12 @@
       <span class="hidden lg:block mb-12 text-center"
         ><i class="fas fa-chevron-down fa-2x"></i
       ></span>
-      <div id="work" class="work p-2 text-center">
+      <div id="work" class="work text-center">
         <h2 class="text-gray-500 mb-16 text-3xl">
           Here's some of my recent work
         </h2>
 
-        <div class="projects-box flex p-2 flex-col">
+        <div class="projects-box p-3 flex flex-col">
           <div
             class="project-card mb-20 hover:shadow-2xl duration-300 hover:bg-gray-700 flex flex-col lg:flex-row hover:text-gray-300 text-gray-400 shadow-lg rounded-lg"
           >
@@ -419,12 +420,12 @@
         class="writing-and-contact flex flex-col lg:flex-row justify-between text-gray-400 pt-8 text-xl"
       >
         <div id="writing" class="writing">
-          <h2 class="text-3xl text-center">
+          <h2 class="text-2xl lg:text-3xl text-center">
             Here's some of my writing from the internet:
           </h2>
           <br />
-          <ul class="link-box w-auto text-left">
-            <li class="my-12 mx-8">
+          <ul class="link-box p-4 w-auto text-left">
+            <li class="my-12">
               <a
                 href="https://careerkarma.com/blog/this-javascript/"
                 target="_blank"
@@ -435,7 +436,7 @@
               >
             </li>
 
-            <li class="my-12 mx-8">
+            <li class="my-12">
               <a
                 href="https://hackernoon.com/crud-and-the-7-restful-actions-uc4m3yoe"
                 target="_blank"
@@ -450,7 +451,7 @@
 
         <div
           id="contact"
-          class="bg-gray-700 contact lg:rounded-tl-lg lg:rounded-br-lg shadow-xl lg:w-1/2 transition-shadow duration-150 hover:shadow-2xl pt-3 my-4"
+          class="bg-gray-700 contact lg:rounded-tl-lg lg:rounded-br-lg shadow-xl lg:w-1/2 transition-shadow duration-150 hover:shadow-2xl pt-3 my-4 mb-16 lg:mb-0"
         >
           <form
             id="contact-me"
@@ -467,7 +468,7 @@
                 placeholder="Your name"
                 name="name"
                 id="name"
-                class="p-2 mb-2 w-full bg-gray-800 text-gray-100 lg:rounded"
+                class="mb-2 p-2 w-full bg-gray-800 text-gray-100 lg:rounded"
               />
               <small></small>
             </div>
